@@ -1,0 +1,6 @@
+/*.js
+node_modules
+dist
+\*.js
+**\polyfills.ts
+**\e2e\**
