@@ -1,4 +1,4 @@
-import Contact from '../models/contact.model';
+import { Contact } from '../models/contact.model';
 
 const CONTACTS: Contact[] = [
   new Contact(1, 'Mike', 'mike@gmail.com', '(55) 88888-9999'),
@@ -8,4 +8,4 @@ const CONTACTS: Contact[] = [
   new Contact(5, 'Joan', 'joan@gmail.com', '(55) 88888-4444'),
 ];
 
-export default CONTACTS;
+export { CONTACTS };

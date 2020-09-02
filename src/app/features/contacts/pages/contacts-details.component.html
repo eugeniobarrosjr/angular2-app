@@ -1,0 +1,71 @@
+<div class="container">
+  <h2>Save contact</h2>
+
+  <div class="row">
+    <div class="col-12">
+      <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        <div class="form-group">
+          <label for="name"> Name: </label>
+          <input
+            #name="ngModel"
+            [(ngModel)]="contact.name"
+            [ngClass]="validateInput(name.valid, name.pristine)"
+            id="name"
+            name="name"
+            placeholder="Insira o nome"
+            required
+            type="text"
+          />
+          <div
+            [hidden]="hiddenNegativeFeedback(name.valid, name.pristine)"
+            class="invalid-feedback"
+          >
+            O campo nome é obrigatório
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email"> Email </label>
+          <input
+            #email="ngModel"
+            [(ngModel)]="contact.email"
+            [ngClass]="validateInput(email.valid, email.pristine)"
+            id="email"
+            name="email"
+            placeholder="Insira o email"
+            required
+            type="email"
+          />
+          <div
+            [hidden]="hiddenNegativeFeedback(email.valid, email.pristine)"
+            class="invalid-feedback"
+          >
+            O campo email é obrigatório
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phone"> Phone </label>
+          <input
+            #phone="ngModel"
+            [(ngModel)]="contact.phone"
+            [ngClass]="validateInput(phone.valid, phone.pristine)"
+            id="phone"
+            name="phone"
+            placeholder="Insira o telefone"
+            required
+            type="text"
+          />
+          <div
+            [hidden]="hiddenNegativeFeedback(phone.valid, phone.pristine)"
+            class="invalid-feedback"
+          >
+            O campo email é obrigatório
+          </div>
+        </div>
+        <button [disabled]="!contactForm.form.valid" class="btn btn-success mr-lg-5" type="submit">
+          Save
+        </button>
+        <a class="btn btn-secondary" (click)="goBack()">Back</a>
+      </form>
+    </div>
+  </div>
+</div>

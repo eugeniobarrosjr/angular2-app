@@ -1,4 +1,4 @@
-class Contact {
+export class Contact {
   id: number;
 
   name: string;
@@ -14,5 +14,3 @@ class Contact {
     this.phone = phone;
   }
 }
-
-export default Contact;
